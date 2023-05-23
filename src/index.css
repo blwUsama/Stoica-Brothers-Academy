@@ -113,11 +113,18 @@ nav a:hover{
 
 }
 
+/* .figure{
+  flex-shrink: 0;
+  width: 30%;
+  border: 2px solid red;
+} */
+
 .right-figure, .left-figure{
   opacity: 0.7;
+  max-width: 100%;
   width:30%;
+  flex-shrink: 0;
   aspect-ratio: 1/2;
-  /* flex-shrink: 0; */
 }
 
 /* .right-figure{
@@ -143,13 +150,6 @@ nav a:hover{
   margin: 0px;
 }
 
-/* .buttons-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  height: 25%;
-} */
-
 .button-join{
   /* width: 100px; */
   height: 50px;
@@ -158,7 +158,12 @@ nav a:hover{
   color: black;
   border: 3px solid red;
 
-  margin: 30px;
+  /* margin: 20%; */
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+
   font-size: 18px;
   white-space: nowrap;
 
@@ -172,31 +177,11 @@ nav a:hover{
   color:  red;
 }
 
-/* .button-about{
-  width: 35%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: transparent;
-  color: white;
-  border: 3px solid red;
-  font-size: 18px;
-
-  margin: 30px;
- 
-}
-
-.button-about:hover{
-  cursor: pointer;
-  background-color: rgb(236, 34, 34);
-  color:  black;
-} */
-
 .row {
   display: flex;
   flex-wrap: wrap;
   padding-left: 5%;
   padding-right: 5%;
-  /* background-color: black; */
   background-color: black;
 }
  
@@ -206,7 +191,6 @@ nav a:hover{
   
 }
   
-
 .row img {
     width:100%;
     height:100%;
@@ -235,20 +219,49 @@ nav a:hover{
   background-color: black;
   text-align: center;
   padding-top: 10%;
+  /* padding-bottom: 10%; */
 }
 
 .text h2{
   color: red;
 }
 
-.text h4{
-  color: white;
+.text hr{
+  width: 30%;
+  /* margin-left: 35px; */
+  border-color: red;
 }
 
 .text p{
   color:white;
 }
 
+.map {
+  background-color: black;
+}
+
+.place-card .place-card-large{
+  display:none;
+}
+
+.footer {
+  background-color: rgb(29, 27, 27);
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.footer img {
+  width: 40px;
+  margin-top: 16px;
+}
+
+.footer p {
+  color: white;
+  display: inline;
+  margin-bottom: 100px;
+}
+
+/* media query for transforming the text-image section into a column rather than a row */
 @media screen and (max-width: 700px)
 {
   .row{
@@ -295,8 +308,8 @@ nav a:hover{
   }
 }
 
-/* media query for shrinking the text between figures */
-@media screen and (max-width: 660px) {
+/* media query for shrinking the text and button between figures */
+@media screen and (max-width: 744px) {
   .between-figures-container h1{
     font-size: 20px;
   }
@@ -304,10 +317,28 @@ nav a:hover{
   .between-figures-container h4{
     font-size: 10px;
   }
+
+  .button-join{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .between-figures-container h1{
+    font-size: 16px;
+  }
+
+  .between-figures-container h4{
+    font-size: 8px;
+  }
+
+  .button-join{
+    font-size: 10px;
+  }
 }
 
 /* media query for replacing navbar's links with a hamburger icon */
-@media screen and (max-width: 560px)
+@media screen and (max-width: 622px)
 {
   .hamburger{
     display:inline;

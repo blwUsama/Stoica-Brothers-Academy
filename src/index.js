@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import training4 from './images/training4.jpg'
 import training2 from './images/training2.jpg'
 import training7 from './images/training7.jpg'
+import pin_icon from './images/pin-icon.png'
 
 
 function App()
@@ -17,17 +18,19 @@ function App()
 
       <div className="content">
         <div className="figures-section-flexbox">
-          <img className="left-figure" src={leftFigure} />
+          {/* <div className='figure'> */}
+            <img className="left-figure" src={leftFigure} />
+          {/* </div> */}
+
           <div className='between-figures-container'>
             <h4> ANTRENEAZA-TE CU CAMPIONII </h4>
             <h1> PENTRU A DEVENI CAMPION </h1>
             <button className='button-join'> <b> DEVINO MEMBRU </b></button>
-            {/* <div className="buttons-container">
-              <button className="button-join"> <b> DEVINO MEMBRU </b></button>
-              <button className="button-about"> <b> AFLA MAI MULTE </b></button>
-            </div> */}
           </div>
-          <img className="right-figure" src={rightFigure} />
+
+          {/* <div className='figure'> */}
+            <img className="right-figure" src={rightFigure} />
+          {/* </div> */}
 
         </div>
       </div>
@@ -38,8 +41,10 @@ function App()
           <div className='fade2R'></div>
         </div>
         <div className="text">
-         <h2> Antrenamente pentru toate varstele </h2>
-         <p> Te asteptam la antrenamente indiferent de varsta sau experienta</p>
+         <h2> Bine ați venit la orice vârstă! </h2>
+         <hr/>
+         <p> Indiferent de câți ani aveți, sunteți bineveniți la sala noastră. 
+             Descoperiți bucuria antrenamentelor într-un mediu prietenos și motivant! </p>
         </div>
       </div>
 
@@ -49,8 +54,11 @@ function App()
           <div className='fade2L'></div>
         </div>
         <div className="text">
-          <h2> Alege arta martiala care ti se potriveste </h2>
-          <p> Avem o gama variata de arte martiale si antrenori capabili sa iti descopere potentialul </p>
+          <h2>Descoperă arta marțială potrivită ție!</h2>
+          <hr/>
+          <p>  Kickboxing, BJJ, karate și MMA. La sala noastră
+               veți găsi disciplina marțială potrivită pasiunii voastre
+               Vă vom ghida în fiecare etapă a călătoriei voastre marțiale </p>
         </div>
       </div>
 
@@ -61,7 +69,22 @@ function App()
         </div>
         <div className="text">
           <h2> Gaseste-ti disciplina </h2>
-          <p> chit ca alegi sa faci ca hobby sau de performanta, venitul la antrenament iti va dezvolta un simt al disciplinii de care vei putea beneficia si in alte aspecte ale vietii </p>
+          <hr/>
+          <p>  Disciplina este cheia succesului în kickboxing. 
+               Vă îndrumăm să atingeți noi culmi, să vă depășiți limitele 
+               și să evoluați într-un mediu de antrenament dedicat. </p>
+        </div>
+      </div>
+
+      <div className='map'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.8809805462074!2d26.036604115522604!3d44.415087979102516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201e80ac34baf%3A0x6ca18a61316a236!2sStoica%20Brothers%20Fight%20Academy!5e0!3m2!1sen!2sro!4v1684844791111!5m2!1sen!2sro" 
+                width="90%" height="450" style={{border:0, marginLeft:'5%', marginRight:'5%'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div className='footer'>
+        <div className='line'> 
+          <img src={pin_icon}/>
+          <p> Bulevardul Ghencea 134, București</p>
         </div>
       </div>
 

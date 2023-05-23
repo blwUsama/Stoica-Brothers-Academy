@@ -13,6 +13,7 @@ function Navbar() {
           <a> Tarife </a>
           <a> Program </a>
           <a> Galerie </a>
+          <a> Contact </a>
           <img className="hamburger" src={hamburger}/>
         </div>
       </nav>
