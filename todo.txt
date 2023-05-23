@@ -1,0 +1,3 @@
+- nav bar like in tristargym and mike's gym
+- google map at the bottom like in tristar
+- loading icon like in mike's gym

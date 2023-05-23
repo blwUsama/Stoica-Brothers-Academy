@@ -1,13 +1,319 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Oswald;
+  src: url("../Oswald/Oswald-VariableFont_wght.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html body {
+  font-family: Oswald, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    /* padding: 10px; */
+    margin-right: 400px;
+    
+    position: fixed;
+    top: 0;
+
+
+    /* background-color: rgb(58, 9, 9); */
+
+    /* background-color: #201c1c; */
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+
+    z-index: 2;
+}
+  
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  white-space: nowrap;
+
+  /* margin-left: 40px;
+  margin-right: 40px; */
+}
+
+/* nav img{
+  height: 70px;    
+  margin: 5px;
+} */
+
+.nav-logo{
+  height: 70px;    
+  margin: 5px;
+  cursor: pointer;
+}
+
+#empty-nav-space{
+  flex: 1;
+}
+
+
+nav a {
+  color: rgb(158, 158, 158);
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+nav a:last-child
+{
+  padding-right: 40px;
+}
+
+nav a:hover{
+  color: white;
+  cursor: pointer;
+  border-bottom: 3px solid red;
+  font-size: 17px;
+}
+
+.hamburger{
+  opacity: 0.5;
+  height: 30px;
+  cursor:pointer;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: none; 
+}
+
+.hamburger:hover{
+  opacity: 1;
+}
+
+.content {
+  margin-top: 80px;
+  background-color:black;
+  background-image: linear-gradient(black, #201c1c, black);
+
+  /* background-image: linear-gradient(black, rgb(44, 43, 43), black); */
+  /* background-image: linear-gradient(black, rgb(71, 25, 25), black); */
+
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+.figures-section-flexbox{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+
+}
+
+.right-figure, .left-figure{
+  opacity: 0.7;
+  width:30%;
+  aspect-ratio: 1/2;
+  /* flex-shrink: 0; */
+}
+
+/* .right-figure{
+  position: absolute;
+  right: 0;
+} */
+
+.between-figures-container{
+  /* flex: 1; */
+  text-align: center;
+  padding-top: 20%;
+  flex-shrink:10;
+}
+
+.between-figures-container h1 {
+  color: white;
+  font-size: 40px;
+  margin: 0px;
+}
+  
+.between-figures-container h4 {
+  color: red;
+  margin: 0px;
+}
+
+/* .buttons-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  height: 25%;
+} */
+
+.button-join{
+  /* width: 100px; */
+  height: 50px;
+  border-radius: 15px;
+  background-color: red;
+  color: black;
+  border: 3px solid red;
+
+  margin: 30px;
+  font-size: 18px;
+  white-space: nowrap;
+
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+}
+
+.button-join:hover{
+  cursor: pointer;
+  background-color: transparent;
+  color:  red;
+}
+
+/* .button-about{
+  width: 35%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  border: 3px solid red;
+  font-size: 18px;
+
+  margin: 30px;
+ 
+}
+
+.button-about:hover{
+  cursor: pointer;
+  background-color: rgb(236, 34, 34);
+  color:  black;
+} */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* background-color: black; */
+  background-color: black;
+}
+ 
+.image-container{
+    width: 50%;
+    position: relative;
+  
+}
+  
+
+.row img {
+    width:100%;
+    height:100%;
+  }
+  
+.fade2R, .fade2L{
+  height:100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.fade2R{
+  background-image: linear-gradient(to right, transparent 50%, black);
+}
+
+.fade2L{
+  background-image: linear-gradient(to left, transparent 50%, black);
+}
+
+.text{
+  width:50%;
+  background-color: black;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.text h2{
+  color: red;
+}
+
+.text h4{
+  color: white;
+}
+
+.text p{
+  color:white;
+}
+
+@media screen and (max-width: 700px)
+{
+  .row{
+    flex-direction: column; 
+  }
+
+  .image-container{
+    width: 100%;
+  }
+
+  .onTop{
+    display: block;
+  }
+
+  .sideBySide{
+    display: none;
+  }
+
+  .text{
+    width: 100%;
+    height: 200px;
+  }
+
+  .fade2L, .fade2R{
+    background-image: linear-gradient(to bottom, transparent 50%, black 100%)
+  }
+}
+
+/* media query for shrinking the navbar's height */
+@media screen and (max-height: 640px)
+{
+  nav, .nav-container{
+    height: 60px;
+  }
+
+  .nav-logo
+  {
+    height: 55px;
+    margin: 2.5px;
+  }
+
+  .content{
+    margin-top: 60px;
+  }
+}
+
+/* media query for shrinking the text between figures */
+@media screen and (max-width: 660px) {
+  .between-figures-container h1{
+    font-size: 20px;
+  }
+
+  .between-figures-container h4{
+    font-size: 10px;
+  }
+}
+
+/* media query for replacing navbar's links with a hamburger icon */
+@media screen and (max-width: 560px)
+{
+  .hamburger{
+    display:inline;
+  }
+
+  nav a{
+    display: none;
+  }
 }
