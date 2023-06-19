@@ -1,6 +1,6 @@
 @font-face {
   font-family: Oswald;
-  src: url("../Oswald/Oswald-VariableFont_wght.ttf");
+  src: url("./Oswald/Oswald-VariableFont_wght.ttf");
 }
 
 html body {
@@ -12,19 +12,11 @@ html body {
 nav {
     width: 100%;
     height: 80px;
-    /* padding: 10px; */
     margin-right: 400px;
-    
     position: fixed;
     top: 0;
-
-
-    /* background-color: rgb(58, 9, 9); */
-
-    /* background-color: #201c1c; */
     background-color: rgba(0,0,0,0.9);
     color: white;
-
     z-index: 2;
 }
   
@@ -36,15 +28,7 @@ nav {
   margin-left: 5vw;
   margin-right: 5vw;
   white-space: nowrap;
-
-  /* margin-left: 40px;
-  margin-right: 40px; */
 }
-
-/* nav img{
-  height: 70px;    
-  margin: 5px;
-} */
 
 .nav-logo{
   height: 70px;    
@@ -64,11 +48,6 @@ nav a {
   padding-bottom: 10px;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-nav a:last-child
-{
-  padding-right: 40px;
 }
 
 nav a:hover{
@@ -93,47 +72,36 @@ nav a:hover{
   opacity: 1;
 }
 
-.content {
+.figures-section-flexbox{
   margin-top: 80px;
   background-color:black;
   background-image: linear-gradient(black, #201c1c, black);
-
-  /* background-image: linear-gradient(black, rgb(44, 43, 43), black); */
-  /* background-image: linear-gradient(black, rgb(71, 25, 25), black); */
-
-  position:relative;
-  height: 100%;
-  width: 100%;
-}
-
-.figures-section-flexbox{
   display: flex;
   position: relative;
   justify-content: space-between;
 
 }
 
-/* .figure{
-  flex-shrink: 0;
-  width: 30%;
-  border: 2px solid red;
-} */
-
 .right-figure, .left-figure{
-  opacity: 0.7;
+  opacity: 0.8;
   max-width: 100%;
   width:30%;
   flex-shrink: 0;
   aspect-ratio: 1/2;
+  animation: fadeInFigures 2s ease-out;
 }
 
-/* .right-figure{
-  position: absolute;
-  right: 0;
-} */
+@keyframes fadeInFigures {
+  from{
+    opacity: 0;
+  }
+  
+  to{
+    opacity: 0.8;
+  }
+}
 
 .between-figures-container{
-  /* flex: 1; */
   text-align: center;
   padding-top: 20%;
   flex-shrink:10;
@@ -150,15 +118,29 @@ nav a:hover{
   margin: 0px;
 }
 
+.between-figures-container h1,h4 {
+  animation: fadeInText 2s;
+}
+
+@keyframes fadeInText {
+  from{
+    opacity:0;
+    transform: translateY(-100px)
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .button-join{
-  /* width: 100px; */
   height: 50px;
   border-radius: 15px;
   background-color: red;
   color: black;
   border: 3px solid red;
 
-  /* margin: 20%; */
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
@@ -219,7 +201,6 @@ nav a:hover{
   background-color: black;
   text-align: center;
   padding-top: 10%;
-  /* padding-bottom: 10%; */
 }
 
 .text h2{
@@ -228,7 +209,6 @@ nav a:hover{
 
 .text hr{
   width: 30%;
-  /* margin-left: 35px; */
   border-color: red;
 }
 
@@ -246,13 +226,15 @@ nav a:hover{
 
 .footer {
   background-color: rgb(29, 27, 27);
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 13%;
+  padding-right: 13%;
+  text-align: center;
 }
 
 .footer img {
-  width: 40px;
+  width: 20px;
   margin-top: 16px;
+  margin-right: 5px
 }
 
 .footer p {
@@ -260,6 +242,40 @@ nav a:hover{
   display: inline;
   margin-bottom: 100px;
 }
+
+.social-links img{
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.social-links hr{
+  width: 300px;
+}
+
+.dropdown-menu{
+  height:100vh;
+  background-color: rgba(0,0,0,0.9);
+  position: absolute;
+  top:60px;
+  left:0px;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  transition: transform 0.3s;
+}
+
+.dropdown-menu.closed {
+  transform: translateX(-130%);
+}
+
+.dropdown-menu.open {
+  transform: translateX(0%);
+}
+
 
 /* media query for transforming the text-image section into a column rather than a row */
 @media screen and (max-width: 700px)
@@ -303,7 +319,7 @@ nav a:hover{
     margin: 2.5px;
   }
 
-  .content{
+  .figures-section-flexbox{
     margin-top: 60px;
   }
 }
@@ -344,7 +360,18 @@ nav a:hover{
     display:inline;
   }
 
-  nav a{
+  .nav-container > a{
     display: none;
+  }
+}
+
+@media screen and (max-width: 355px)
+{
+  .text h2{
+    font-size: 21px;
+  }
+
+  .text p{
+    font-size: 15px;
   }
 }
