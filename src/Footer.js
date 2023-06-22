@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/Footer.css'
 import pin_icon from './images/pin-icon.png'
 import mail_icon from './images/mail-icon.png'
 import phone_icon from './images/phone-icon.png'

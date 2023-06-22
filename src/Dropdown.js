@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Dropdown({Open}) {
+function Dropdown({Open, toggleFunction}) {
     let className = Open ? "dropdown-menu open" : "dropdown-menu closed"
     return(
         <div className={className}>
-            <a> Despre noi </a>
+            <Link to="/about"  onClick={toggleFunction}> Despre noi </Link>
             <a> Antrenori </a>
             <a> Tarife </a>
             <a> Program </a>

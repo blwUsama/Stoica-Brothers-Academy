@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import Navbar from './Navbar';
-import MainPage from './MainPage'
-import Footer from './Footer'
+import MainPage from './MainPage';
+import About from './About';
+import Footer from './Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 
@@ -12,10 +14,13 @@ function App()
 {
  return (
     <div>
-      <Navbar />
-
-      <MainPage />
-
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<MainPage/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );
