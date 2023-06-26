@@ -121,10 +121,14 @@ nav, .nav-container{
 .dropdown-menu{
   top: 60px;
 }
+
+.page-title{
+  margin-top: 60px;
+}
 }
 
 /* media query for replacing navbar's links with a hamburger icon */
-@media screen and (max-width: 622px)
+@media screen and (max-width: 655px)
 {
 .hamburger{
   display:inline;

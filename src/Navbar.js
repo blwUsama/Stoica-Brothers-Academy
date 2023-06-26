@@ -25,8 +25,8 @@ function Navbar() {
           <div id='empty-nav-space'></div>
           <Link to="/about"> Despre noi </Link>
           <a> Antrenori </a>
-          <a> Tarife </a>
-          <a> Program </a>
+          <Link to="/preturi"> Preturi </Link>
+          <Link to="/program"> Program </Link>
           <a> Galerie </a>
           <a> Contact </a>
           <img className="hamburger" src={hamburger} onClick={handleMenuToggle}/>

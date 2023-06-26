@@ -7,8 +7,8 @@ function Dropdown({Open, toggleFunction}) {
         <div className={className}>
             <Link to="/about"  onClick={toggleFunction}> Despre noi </Link>
             <a> Antrenori </a>
-            <a> Tarife </a>
-            <a> Program </a>
+            <Link to="/preturi"  onClick={toggleFunction}> Preturi </Link>
+            <Link to="/program" onClick={toggleFunction}> Program </Link>
             <a> Galerie </a>
             <a> Contact </a>
         </div>

@@ -5,7 +5,7 @@ import big_image from './images/stoica4-4.jpg'
 
 function About() {
     return(
-        <div className='content'>
+        <div>
             <div className='page-title'>
                 <img src={title_image} className='page-title-image'/>
                 <div className='page-title-text'>

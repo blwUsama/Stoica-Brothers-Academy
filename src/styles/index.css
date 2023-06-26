@@ -24,6 +24,7 @@ html body {
   display: flex;
   position: relative;
   justify-content: space-between;
+  /* max-height: 100vh; */
 
 }
 
@@ -167,6 +168,38 @@ html body {
 
 .place-card .place-card-large{
   display:none;
+}
+
+.page-title{
+  position: relative;
+  background-color: black;
+  margin-top: 80px;
+}
+
+.page-title-image{
+  width: 100%;
+  /* margin-left: 15%;
+  margin-right:15%; */
+  height: auto;
+  
+}
+
+.page-title-text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(transparent , black);
+}
+
+.page-title-text h1{
+  font-size: 40px;
+  color: white;
+  -webkit-text-stroke:2px black ;
 }
 
 /* media query for transforming the text-image section into a column rather than a row */

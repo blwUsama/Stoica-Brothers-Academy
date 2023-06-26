@@ -1,0 +1,16 @@
+.program-content{
+    background-color: black;
+    /* margin-top: 80px; */
+}
+
+.schedule{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.trainers{
+    width: 100%;
+    height: auto;
+}
