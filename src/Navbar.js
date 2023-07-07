@@ -23,10 +23,10 @@ function Navbar() {
         <div className='nav-container'>
           <Link to="/" onClick={() => {if(isOpen) handleMenuToggle(); }}> <img className='nav-logo' src={logo} /> </Link>
           <div id='empty-nav-space'></div>
+          <Link to="/"> Acasa </Link>
           <Link to="/about"> Despre noi </Link>
-          <a> Antrenori </a>
-          <Link to="/preturi"> Preturi </Link>
-          <Link to="/program"> Program </Link>
+          <Link to="/antrenori"> Antrenori </Link>
+          <Link to="/antrenamente"> Antrenamente </Link>
           <a> Galerie </a>
           <a> Contact </a>
           <img className="hamburger" src={hamburger} onClick={handleMenuToggle}/>

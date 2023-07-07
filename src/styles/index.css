@@ -7,10 +7,11 @@ html body {
   font-family: Oswald, sans-serif;
   margin: 0;
   height: 100%;
-  /* background-color: black; */
+  background-color: black;
   /* There is an issue with iphones, the swipe-up-refresh widget separates the navbar 
   from the content, exposing the html or body's white background color, needs fixing */
   overscroll-behavior: none;
+  padding: 0;
 }
 
 .content{
@@ -193,7 +194,7 @@ html body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(transparent , black);
+  /* background-image: linear-gradient(transparent 20%, black); */
 }
 
 .page-title-text h1{

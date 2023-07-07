@@ -1,0 +1,24 @@
+.antrenamente-content{
+    background-color: black;
+    margin-top: 80px;
+}
+
+.antrenamente-content p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    -webkit-text-stroke: 0.5px red;
+    /* padding-right: 10%; */
+}
+
+.schedule{
+    width: 75%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.trainers{
+    width: 100%;
+    height: auto;
+}

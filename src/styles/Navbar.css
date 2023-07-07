@@ -125,6 +125,10 @@ nav, .nav-container{
 .page-title{
   margin-top: 60px;
 }
+
+.program-content{
+  margin-top: 60px;
+}
 }
 
 /* media query for replacing navbar's links with a hamburger icon */
