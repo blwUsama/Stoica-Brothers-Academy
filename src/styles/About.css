@@ -31,25 +31,31 @@
 
 .about-us-content hr{
     color: red;
-    width: 70%;
+    width: 80%;
     margin-left: 10px;
     margin-bottom: 40px;
 }
 
-.about-us-content h4{
+.about-us-content h4.visible{
     padding-left: 10px;
+    width: 80%;
     color: white;
     font-size: 24px;
     animation: fadeIn 2s ease-in;
 }
 
-.about-us-content p{
+.about-us-content p.visible{
     padding-left: 10px;
+    width: 80%;
     color: rgb(183, 183, 183);
     font-size: 18px;
-    animation: slideRight 2s;
+    animation: slideRight 1s;
     /* animation-delay: 1s; */
 }
+
+/* .hidden{
+    display:none;
+} */
 
 @keyframes fadeIn {
     from{

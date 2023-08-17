@@ -8,15 +8,15 @@ function Antrenamente() {
     return(
         <div>
             <div className='page-title'>
-                <img src={title_image} className='page-title-image'/>
+                <img src={title_image} alt='Ring' className='page-title-image'/>
                 <div className='page-title-text'>
                     <h1> Antrenamente </h1>
                 </div>
             </div>
 
             <div className='antrenamente-content'>
-                <img src={schedule_image} className='schedule'/>
-                <img src={trainers_image} className='trainers'/>
+                <img src={schedule_image} alt='Program' className='schedule'/>
+                <img src={trainers_image} alt='Antrenori' className='trainers'/>
             </div>
 
             {/* <div className='map'>

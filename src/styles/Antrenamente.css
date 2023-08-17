@@ -1,6 +1,6 @@
 .antrenamente-content{
     background-color: black;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .antrenamente-content p{
@@ -12,7 +12,7 @@
 }
 
 .schedule{
-    width: 75%;
+    width: 80%;
     height: auto;
     margin-left: 10%;
     margin-right: 10%;
@@ -21,4 +21,13 @@
 .trainers{
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 550px)
+{
+    .schedule{
+        width: 95%;
+        margin: 2.5%;
+        margin-right: 2.5%;
+    }
 }

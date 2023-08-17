@@ -81,7 +81,7 @@ html body {
   }
 }
 
-.button-join{
+.button{
   height: 50px;
   border-radius: 15px;
   background-color: red;
@@ -97,10 +97,10 @@ html body {
   white-space: nowrap;
 
   transition-property: background-color, color;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 }
 
-.button-join:hover{
+.button:hover{
   cursor: pointer;
   background-color: transparent;
   color:  red;
@@ -242,7 +242,7 @@ html body {
     font-size: 10px;
   }
 
-  .button-join{
+  .button{
     font-size: 12px;
   }
 }
@@ -256,7 +256,7 @@ html body {
     font-size: 8px;
   }
 
-  .button-join{
+  .button{
     font-size: 10px;
   }
 }

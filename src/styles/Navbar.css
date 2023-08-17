@@ -72,10 +72,16 @@ padding-bottom: 10px;
 padding-right: 20px;
 padding-left: 20px;
 display: none; 
+z-index: 1;
 }
 
 .hamburger:hover{
 opacity: 1;
+}
+
+/* parent container for the dropdown menu */
+.parent-container{
+  display: flex;
 }
 
 .dropdown-menu{
@@ -93,12 +99,20 @@ align-items: center;
 transition: transform 0.3s;
 }
 
-.dropdown-menu.closed {
-transform: translateX(-130%);
+.dropdown-menu.closed, .rest-of-width.closed{
+transform: translateX(-100vw);
 }
 
-.dropdown-menu.open {
+.dropdown-menu.open, .rest-of-width.open{
 transform: translateX(0%);
+}
+
+.rest-of-width {
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+  left: 80%;
+  top: 60px;
 }
 
 /* media query for shrinking the navbar's height */

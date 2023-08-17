@@ -2,6 +2,8 @@
   background-color: rgb(29, 27, 27);
   padding-left: 13%;
   padding-right: 13%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -25,6 +27,7 @@
 
 .social-links hr{
   width: 95%;
+  margin-top: 30px;
 }
 
 .social-links a{

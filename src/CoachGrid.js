@@ -1,60 +1,98 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import gitlan from './images/gitlan.jpg';
 import mircea from './images/mircea.jpg';
+
 import mihalache from './images/mihalache.jpg';
+import mihalacheBanner from './images/mihalache-banner.png';
+
 import serghei from './images/serghei.jpg';
+import sergheiBanner from './images/serghei-banner.png';
+
 import mogos from './images/mogos.jpg';
+import mogosBanner from './images/mogos-banner.png';
+
 import hodea from './images/hodea.jpg';
+import hodeaBanner from './images/hodea-banner-taller.png';
+import hodeaGrupa from './images/hodea-grupa.jpg';
+import hodeaWidget from './images/hodea-widget.jpg';
+
+import coaches from './images/coaches.png';
+import YouTube from 'react-youtube';
+// import ReactPlayer from 'react-player';
 import VideoPlayer from './VideoPlayer';
 
 function CoachGrid() {
     const [showVideo, setShowVideo] = useState(false);
-    const [videoURL, setVideoURL] = useState();
+    const [coach, setCoach] = useState();
+    const [startTime, setStartTime] = useState();
 
+    const coach2src = {
+                        "hodea": hodeaBanner, 
+                        "serghei": sergheiBanner,
+                       "mogos" : mogosBanner,
+                       "mihalache" : mihalacheBanner
+                    }
 
-    function handlePlayerRendering(URL) {
+    function handlePlayerRendering(coach, startTime) {
+        setCoach(coach);
         setShowVideo(true);
-        setVideoURL(URL);
+        setStartTime(startTime);
     }
 
-    if(showVideo) {
-        return(
-            <div>
-                <iframe 
-                    src={videoURL} 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                </iframe>
-                <button className='button-join'> <b> inapoi </b></button>
-            </div>
-        )
+    function handleBackButton() {
+        setShowVideo(false);
     }
+
+    if(showVideo && coach != undefined)
+    {
+        return(
+             <div>
+                <div className='flexbox-container'>
+                    <div className='video-player'>
+                        <VideoPlayer src={coach} startTime={startTime}/>           
+                    </div>
+                    <img className={"banner"} src={coach2src[coach]}/>
+                    <button className='backButton' onClick={handleBackButton}> <b> inapoi </b></button>    
+                </div>
+                <img className='group-photo' src={hodeaGrupa}/>           
+             </div> 
+     
+            )
+    }
+
+
     return (
-        <div>
-            <div className='grid-container'>
+
+    <div>
+        <div className='flexbox-container'>
+            <div className='grid-container visible'>
                 <div>
-                    <img src={gitlan}/>
+                    <img src={gitlan} alt='Gitlan'/>
                 </div>
                 <div>
-                    <img src={mircea}/>
+                    <img src={mircea} alt='Mircea'/>
                 </div>
                 <div>
-                    <img src={mihalache} onClick={() => handlePlayerRendering("https://www.youtube.com/embed/jr3RA4vz1H4?start=29&autoplay=1&rel=0")}/>
+                    <img src={mihalache} alt='Mihalache' onClick={() => handlePlayerRendering("mihalache", 29)}/>
                 </div>
                 <div>
-                    <img src={serghei} onClick={() => handlePlayerRendering("https://www.youtube.com/embed/mIyFHJv90Qw?start=28&autoplay=1")}/>
+                    <img src={serghei} alt='Serghei' onClick={() => handlePlayerRendering("serghei", 28)}/>
                 </div>
                 <div>
-                    <img src={mogos} onClick={() => handlePlayerRendering("https://www.youtube.com/embed/AfVKcA9-qCg?start=28&autoplay=1")}/>
+                    <img src={mogos} alt='Mogos' onClick={() => handlePlayerRendering("mogos", 28)}/>
                 </div>
                 <div>
-                    <img src={hodea} onClick={() => handlePlayerRendering("https://www.youtube.com/embed/ll4fapxYjrw?start=28&autoplay=1")}/>
+                    <img src={hodea} alt='Hodea' onClick={() => handlePlayerRendering("hodea", 28)}/>
                 </div>
             </div>
-                
-                
+
+            <img className={"banner"} src={hodeaBanner}/>
         </div>
+
+        <img className='widget' src={hodeaWidget}/>
+        <img className='group-photo' src={hodeaGrupa}/>
+
+    </div>
     )
 }
 

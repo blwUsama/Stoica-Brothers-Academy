@@ -1,15 +1,37 @@
-import React from 'react';
-import YouTube from 'react-youtube';
+import React, {useEffect, useRef} from 'react';
+import hodea from './videos/Hodea.mp4';
+import serghei from './videos/Serghei.mp4';
+import mogos from './videos/Mogos.mp4';
+import mihalache from './videos/Mihalache.mp4';
 
-function VideoPlayer({videoId, startTime}) {
-    const opts = {
-        playerVars: {
-            autoplay: 1,
-            start: startTime,
-        },
+function VideoPlayer({src, startTime}) 
+{
+    const videoRef = useRef(null);
+    useEffect(() => 
+    {
+        if(videoRef.current)
+            videoRef.current.currentTime = startTime;
+    }, [startTime]);
+
+
+    const prop2src = {
+        "hodea": hodea,
+        "serghei": serghei,
+        "mogos": mogos,
+        "mihalache": mihalache
     };
 
-    return <YouTube videoId={videoId} opts={opts} />
-    }
 
+    return (      
+        <div>
+            <video ref={videoRef} controls autoPlay={true}>
+                <source src={prop2src[src]} type='video/mp4'/>
+            </video>
+        
+        </div>
+            )
+    
+};
+
+  
 export default VideoPlayer;

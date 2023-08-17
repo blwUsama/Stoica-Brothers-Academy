@@ -1,16 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Dropdown({Open, toggleFunction}) {
-    let className = Open ? "dropdown-menu open" : "dropdown-menu closed"
+function Dropdown({isOpen, toggleFunction}) {
+    let className = isOpen ? "dropdown-menu open" : "dropdown-menu closed"
+   
+   
+
     return(
-        <div className={className}>
-            <Link to="/"  onClick={toggleFunction}> Acasa </Link>
-            <Link to="/about"  onClick={toggleFunction}> Despre noi </Link>
-            <Link to="/antrenori" onClick={toggleFunction}> Antrenori </Link>
-            <Link to="/antrenamente" onClick={toggleFunction}> Antrenamente </Link>
-            <a> Galerie </a>
-            <a> Contact </a>
+        <div className='parent-container'>
+            <div className={className}>
+                <Link to="/"  onClick={toggleFunction}> Acasa </Link>
+                <Link to="/about"  onClick={toggleFunction}> Despre noi </Link>
+                <Link to="/antrenori" onClick={toggleFunction}> Antrenori </Link>
+                <Link to="/antrenamente" onClick={toggleFunction}> Antrenamente </Link>
+                <a> Galerie </a>
+                <a> Contact </a>
+            </div>
+
+            {/* this div is created just to offer a clickable area for 
+                closing the dropdown menu beside the hamburger icon. It occupies
+                20% of the width, the dropdown menu having 80% */}
+            
+            <div className={ isOpen ? "open rest-of-width" : "closed rest-of-width"} onClick={toggleFunction}>
+
+            </div>
         </div>
     )
 }

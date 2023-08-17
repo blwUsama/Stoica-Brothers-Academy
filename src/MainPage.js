@@ -14,7 +14,7 @@ function MainPage()
                 <div className='between-figures-container'>
                     <h4 className='between-figures-headings'> ANTRENEAZA-TE CU CAMPIONII </h4>
                     <h1 className='between-figures-headings'> PENTRU A DEVENI CAMPION </h1>
-                    <button className='button-join'> <b> DEVINO MEMBRU </b></button>
+                    <button className='button'> <b> DEVINO MEMBRU </b></button>
                 </div>
                 <img className="right-figure" src={rightFigure} />
             </div>
@@ -62,7 +62,7 @@ function MainPage()
 
             <div className='map'>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.8809805462074!2d26.036604115522604!3d44.415087979102516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201e80ac34baf%3A0x6ca18a61316a236!2sStoica%20Brothers%20Fight%20Academy!5e0!3m2!1sen!2sro!4v1684844791111!5m2!1sen!2sro" 
-                        width="90%" height="450" style={{border:0, marginLeft:'5%', marginRight:'5%'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        width="90%" height="auto" style={{border:0, marginLeft:'5%', marginRight:'5%', aspectRatio:16/9}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     )

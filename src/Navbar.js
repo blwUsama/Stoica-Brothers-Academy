@@ -6,6 +6,8 @@ import hamburger from './images/hamburger.png'
 import {Link} from 'react-router-dom';
 
 function Navbar() {
+
+  // state that toggles the dropdown menu from visible to hidden
   const [isOpen, setIsOpen] = useState(false);
 
   function handleMenuToggle() {
@@ -30,7 +32,7 @@ function Navbar() {
           <a> Galerie </a>
           <a> Contact </a>
           <img className="hamburger" src={hamburger} onClick={handleMenuToggle}/>
-          {isOpen ? ( <Dropdown Open = {true} toggleFunction={handleMenuToggle}/>) : ( <Dropdown Open = {false}/>)}
+          {isOpen ? ( <Dropdown isOpen = {true} toggleFunction={handleMenuToggle}/>) : ( <Dropdown isOpen = {false}/>)}
         </div>
       </nav>
     )

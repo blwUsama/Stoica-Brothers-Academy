@@ -1,20 +1,27 @@
-h4{
-    color: white;
-    font-size: 24px;
-    padding-left: 20px;
+.antrenori-content{
+    position: relative;
 }
 
-.antrenori-content p{
-    color: rgb(183, 183, 183);
-    padding-left: 20px;
+.flexbox-container{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.group-photo{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .grid-container{
     background-color: white;
     display: grid;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    
+    width: 70%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
@@ -23,20 +30,98 @@ h4{
 .grid-container img{
     width:100%;
     height:100%;
-    border: 5px white solid;
+
+    border: 0.3vw white solid;
+
     box-sizing: border-box;
     transition: border 0.2s
 }
 
 .grid-container img:hover{
-    border: 7px red solid;
+    border: 0.7vw red solid;
     z-index: 1;
 }
 
-iframe{
+.video-player{
+    width: 70%;
+}
+
+video{
+    width: 100%;
+}
+
+.banner{
+    width: 30%;
+}
+
+.widget{
+    position: absolute;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    aspect-ratio: 1.70/1;
+    visibility: hidden;
+}
 
+.backButton{
+    height: 8%;
+    width: 10%;
+    margin-left: 3%;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: black;
+    border: 1px solid red;
+
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+
+    position: absolute;
+    bottom:2%;
+    left: 66.5%;
+  
+    font-size: 2vw;
+    white-space: nowrap;
+  
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+  }
+
+  .backButton:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color:  red;
+  }
+  
+@media screen and (max-width: 770px){
+
+    .grid-container{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .video-player{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .banner, .group-photo{
+        position: absolute;
+        visibility: hidden;  
+    }
+
+    
+
+    .widget{
+        position: static;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .banner{
+        height: 36.5%;
+    }
 }

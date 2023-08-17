@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import MainPage from './MainPage';
@@ -7,24 +7,32 @@ import Antrenamente from './Antrenamente';
 import Antrenori from './Antrenori';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 
+function ScrollToTop() {
+  let location = useLocation();
+  useEffect(() => {
+    console.log(location);
+    window.scrollTo(0, 0);
+  }, [location])
 
+  return null;
+}
 
-function App()
-{
- return (
+function App() {
+  return (
     <div>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<MainPage/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/antrenamente" element={<Antrenamente/>}/>
-          <Route path="/antrenori" element={<Antrenori/>}/>
+          <Route ac path="/" element={<MainPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/antrenamente" element={<Antrenamente />} />
+          <Route path="/antrenori" element={<Antrenori />} />
 
         </Routes>
+        <ScrollToTop />
       </BrowserRouter>
       <Footer />
     </div>
@@ -32,8 +40,8 @@ function App()
 }
 
 ReactDOM.render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>,
-    document.getElementById("root")
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
