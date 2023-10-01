@@ -3,6 +3,7 @@ import hodea from './videos/Hodea.mp4';
 import serghei from './videos/Serghei.mp4';
 import mogos from './videos/Mogos.mp4';
 import mihalache from './videos/Mihalache.mp4';
+import gitlan from './videos/Gitlan.mp4';
 
 function VideoPlayer({src, startTime}) 
 {
@@ -18,7 +19,8 @@ function VideoPlayer({src, startTime})
         "hodea": hodea,
         "serghei": serghei,
         "mogos": mogos,
-        "mihalache": mihalache
+        "mihalache": mihalache,
+        "gitlan": gitlan,
     };
 
 

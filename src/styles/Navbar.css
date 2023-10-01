@@ -100,7 +100,7 @@ transition: transform 0.3s;
 }
 
 .dropdown-menu.closed, .rest-of-width.closed{
-transform: translateX(-100vw);
+transform: translateX(-300vw);
 }
 
 .dropdown-menu.open, .rest-of-width.open{

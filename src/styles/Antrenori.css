@@ -2,19 +2,22 @@
     position: relative;
 }
 
-.flexbox-container{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-    display: flex;
-    flex-direction: row;
+.sliding-text{
+    overflow: hidden;
+    background-color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.group-photo{
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
+.sliding-text p {
+    color: white;
+    /* -webkit-text-stroke: 0.3vw black; */
+    font-size: 3vw;
+    white-space: nowrap;
+    /* display: inline; */
+    margin: 0;
+    /* transform: translateX(-165%); */
+    animation: slideToRightDesktop 10s infinite linear;
 }
 
 .grid-container{
@@ -22,6 +25,8 @@
     display: grid;
     
     width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
@@ -42,42 +47,41 @@
     z-index: 1;
 }
 
+.hovered{
+    border: 0.7vw red solid;
+    z-index: 1;
+    animation: fadeIn 0.2s;
+}
+
 .video-player{
     width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 video{
     width: 100%;
 }
 
-.banner{
-    width: 30%;
-}
-
-.widget{
-    position: absolute;
+/* .widget{
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    visibility: hidden;
-}
+} */
 
 .backButton{
-    height: 8%;
+    height: 15%;
     width: 10%;
     margin-left: 3%;
-    padding-bottom: 10px;
     border-radius: 5px;
     background-color: red;
     color: black;
     border: 1px solid red;
 
-    /* margin-top: 10px;
-    margin-bottom: 10px; */
-
     position: absolute;
-    bottom:2%;
-    left: 66.5%;
+    z-index: 1;
+    left: 87%;
+    top: -17%;
   
     font-size: 2vw;
     white-space: nowrap;
@@ -91,8 +95,98 @@ video{
     background-color: transparent;
     color:  red;
   }
+
+  .test{
+    width: 90%;
+    margin-left: 5%;
+    margin-left: 5%;
+    margin-top: 10px;
+    /* height: 600px; */
+    background-color: transparent;
+    display: flex;
+    background-image: url('../images/background-pattern.png');
+    background-size: 15%;
+    position: relative;
+}
+
+.banner{
+    width: 30%;
+}
+
+.images{
+    width: 70%;
+    position: relative;
+    /* height: 600px; */
+}
+
+.group{
+    position:absolute;
+    width: 70%;
+    bottom: 20px;;
+    right: 15%;
+    /* height: auto; */
+}
+
+.group.visible{
+    animation: fadeIn 1s ease-in;
+}
+
+.cool-picture1{
+    width: 40%;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 1;
+    /* animation: fadeIn 2s ease-in; */
+}
+
+.cool-picture2{
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    z-index: 1;
+    /* animation: fadeIn 2s ease-in; */
+}
+
+.cool-picture1.visible, .cool-picture2.visible{
+    animation: fadeIn 1.5s ease-in;
+}
   
+.hidden{
+    opacity: 0;
+}
+
+.test p{
+    color: white;
+}
+
+@keyframes slideToRightDesktop {
+    from{
+        transform: translateX(0%);
+    }
+
+    to{
+        transform: translateX(-165%);
+    }  
+}
+
+@keyframes slideToRightMobile { 
+    from{
+        transform: translateX(0%);
+    }
+
+    to{
+        transform: translateX(-137%);
+    }  
+}
+
 @media screen and (max-width: 770px){
+
+    .sliding-text p{
+        font-size: 5vw;
+        animation: slideToRightMobile linear infinite 5s;
+    }
 
     .grid-container{
         width: 90%;
@@ -103,25 +197,57 @@ video{
     .video-player{
         width: 90%;
         margin-left: 5%;
-        margin-right: 5%;
-    }
+        margin-right: 5%;    }
 
-    .banner, .group-photo{
+    .backButton{
         position: absolute;
-        visibility: hidden;  
+        top: 0;
+        left: 80%;
+        font-size: 3vw;
+        margin: 0;
+        width: 20%;
+        height: 13%
     }
 
-    
-
-    .widget{
-        position: static;
-        visibility: visible;
+    .test{
+        flex-direction: column;
     }
-}
-
-@media screen and (max-width: 520px) {
 
     .banner{
-        height: 36.5%;
+        width: 80%;
+        margin-left: 0%;
+        margin-right: 20%;
+    }
+
+    .images{
+        height: calc(100vw * 0.8 * 4/7);
+        width: 100%;
+    }
+
+    .group{
+        width: 80%;
+        bottom: 20px;;
+        right: 20px;
+        /* height: auto; */
+    }
+
+    .cool-picture1{
+        top: -20px;
+    }
+
+    .cool-picture2{
+        bottom: 20px;
+    }
+    
+}
+
+@keyframes fadeIn {
+    
+    from{
+        opacity: 0
+    }   
+    
+    to{
+        opacity: 1;
     }
 }

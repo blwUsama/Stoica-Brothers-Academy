@@ -16,7 +16,12 @@ function Antrenori(){
             </div>
 
             <div className='antrenori-content'>
-
+                <div className='sliding-text'>
+                        <p> VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR </p>
+                </div>
                 <CoachGrid/>
 
             </div>

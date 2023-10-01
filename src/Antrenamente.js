@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/Antrenamente.css';
 import title_image from './images/stoica7-2.jpeg';
-import schedule_image from './images/program4-1-1.png';
+import schedule_image from './images/program4-1-2.png';
 import trainers_image from './images/program4-2-1.jpg';
 
 function Antrenamente() {

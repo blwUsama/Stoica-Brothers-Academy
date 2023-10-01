@@ -5,6 +5,7 @@ import MainPage from './MainPage';
 import About from './About';
 import Antrenamente from './Antrenamente';
 import Antrenori from './Antrenori';
+import Contact from './Contact';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
@@ -13,7 +14,6 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 function ScrollToTop() {
   let location = useLocation();
   useEffect(() => {
-    console.log(location);
     window.scrollTo(0, 0);
   }, [location])
 
@@ -30,6 +30,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/antrenamente" element={<Antrenamente />} />
           <Route path="/antrenori" element={<Antrenori />} />
+          <Route path="/contact" element={<Contact />} />
 
         </Routes>
         <ScrollToTop />

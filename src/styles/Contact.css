@@ -1,0 +1,177 @@
+.contact-content{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.flex-container{
+    display: flex;
+    gap: 4%;
+    margin-bottom: 40px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+form{
+    width: 48%;
+    background-color: rgb(40, 40, 40);
+    border: 5px solid rgb(64, 64, 64);
+    padding-bottom: 20px;
+
+    position: sticky;
+    top: 80px;
+    right: 5%;
+    align-self: flex-start;
+}
+
+form h2{
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom :20px;
+    text-align: center;
+}
+
+.inline-input{
+    width: 90%;
+    display: flex;
+    gap: 3%;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+}
+
+.inline-input input{
+    background-color: rgb(64, 64, 64);
+    height: 50px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.email, .subject {
+    display: block;
+    background-color: rgb(64, 64, 64);
+    height: 50px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+}
+
+.message{
+    /* display: block; */
+    background-color: rgb(64, 64, 64);
+    height: 200px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    /* vertical-align: top; */
+        
+}
+
+
+.submitButton{
+    height: 50px;
+    width: 100px;
+    margin-left: 5%;
+    border-radius: 5px;
+    background-color: red;
+    color: black;
+    border: 1px solid red;
+  
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+  
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+  }
+
+  .submitButton:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color:  red;
+  }
+
+.success, .failure{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid rgb(64, 64, 64);
+}
+
+.success p{
+    color: rgb(63, 255, 63);
+}
+
+.failure p {
+    color: rgb(255, 41, 41);
+}
+
+.FAQ-section{
+    width: 48%;
+    border: 5px solid rgb(64, 64, 64);
+    align-self: flex-start;
+    position: sticky;
+    top: 80px;
+}
+
+.faq-title h2{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.row-title-text{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.row-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media screen and (max-width: 640px) { 
+    .inline-input{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-container{
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    form, .FAQ-section{
+        position: static;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}

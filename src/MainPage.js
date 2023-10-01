@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import leftFigure from './images/left-figure.png'
 import rightFigure from './images/right-figure.png'
 import training4 from './images/training4.jpg'
@@ -14,7 +15,7 @@ function MainPage()
                 <div className='between-figures-container'>
                     <h4 className='between-figures-headings'> ANTRENEAZA-TE CU CAMPIONII </h4>
                     <h1 className='between-figures-headings'> PENTRU A DEVENI CAMPION </h1>
-                    <button className='button'> <b> DEVINO MEMBRU </b></button>
+                    <Link to="/antrenamente"><button className='button'> <b> DEVINO MEMBRU </b></button></Link>
                 </div>
                 <img className="right-figure" src={rightFigure} />
             </div>
