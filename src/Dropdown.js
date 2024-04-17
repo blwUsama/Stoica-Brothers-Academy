@@ -1,10 +1,36 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 function Dropdown({isOpen, toggleFunction}) {
+    
     let className = isOpen ? "dropdown-menu open" : "dropdown-menu closed"
-   
-   
+
+    function handleMenuBack(event) {
+        event.preventDefault();
+        if(isOpen)
+        {
+            event.preventDefault();
+            toggleFunction();
+            //   setIsOpen(false);
+            //   window.history.replaceState(null, "", window.location.href); // Prevent navigating back in history
+            // console.log(`class after back ${className}`);
+        }
+      }
+    
+      useEffect(() => {
+        // console.log(`class before back: ${className}`)
+        window.addEventListener("popstate", toggleFunction);
+    
+        return () => { // i think this removal is redundant because the navbar never 
+                       // unmounts but it's still good practic
+          window.removeEventListener("popstate", toggleFunction);
+        }
+      }, [])
+
+      useEffect(() => {
+        // console.log(`class changed to ${className}`);
+      }, [className]);
+    
 
     return(
         <div className='parent-container'>

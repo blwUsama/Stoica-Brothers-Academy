@@ -1,5 +1,6 @@
-import React, { Suspense, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './styles/index.css';
 import MainPage from './MainPage';
 import About from './About';
@@ -10,7 +11,9 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
-
+// this function was created because when a user would switch pages 
+// the page would stay scrolled down which led to bad user experience,
+// it scrolls back to the top of the page whenever the url location changes
 function ScrollToTop() {
   let location = useLocation();
   useEffect(() => {
@@ -40,9 +43,14 @@ function App() {
   );
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
+
+const domNode = document.getElementById('root');
+const root = createRoot(domNode);
+
+root.render(<App />)

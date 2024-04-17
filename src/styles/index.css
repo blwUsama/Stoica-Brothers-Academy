@@ -1,8 +1,12 @@
 @font-face {
   font-family: Oswald;
-  src: url("./Oswald/Oswald-VariableFont_wght.ttf");
+  src: url("./fonts/Oswald-VariableFont_wght.ttf");
 }
 
+* {
+  -webkit-tap-highlight-color: transparent; /* Webkit browsers (Safari, Chrome, etc.) */
+  tap-highlight-color: transparent; /* Non-Webkit browsers (Firefox) */
+}
 
 html body {
   font-family: Oswald, sans-serif;
@@ -31,7 +35,7 @@ html body {
 }
 
 .right-figure, .left-figure{
-  opacity: 0.8;
+  opacity: 1;
   max-width: 100%;
   width:30%;
   flex-shrink: 0;
@@ -45,7 +49,7 @@ html body {
   }
   
   to{
-    opacity: 0.8;
+    opacity: 1;
   }
 }
 
@@ -173,6 +177,10 @@ html body {
 
 .map iframe{
   max-height: 650px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  aspect-ratio: 16/9;
 }
 
 .place-card .place-card-large{

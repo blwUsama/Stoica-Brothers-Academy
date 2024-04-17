@@ -12,25 +12,25 @@ function Footer()
     return(
         <div className='footer'>
         <div className='line'> 
-          <img src={pin_icon}/>
+          <img src={pin_icon} alt='pin'/>
           <p> Bulevardul Ghencea 134, București</p>
         </div>
 
         <div className='line'> 
-          <img src={mail_icon}/>
+          <img src={mail_icon} alt='mail'/>
           <p> balawiu@gmail.com </p>
         </div>
 
         <div className='line'> 
-          <img src={phone_icon}/>
+          <img src={phone_icon} alt='phone'/>
           <p> 0762 598 952 </p>
         </div>
 
         <div className='social-links'>
           <hr></hr>
-          <a href='https://www.facebook.com/StoicaBrothersFA/' target="_blank" rel="noopener noreferrer"> <img src={facebook_icon}/> </a>
-          <a href='https://www.youtube.com/@AndreiStoica1' target="_blank" rel="noopener noreferrer"> <img src={youtube_icon}/> </a>
-          <a href='https://www.instagram.com/teamstoica/' target="_blank" rel="noopener noreferrer"> <img src={instagram_icon}/> </a>
+          <a href='https://www.facebook.com/StoicaBrothersFA/' target="_blank" rel="noopener noreferrer"> <img src={facebook_icon} alt='facebook'/> </a>
+          <a href='https://www.youtube.com/@AndreiStoica1' target="_blank" rel="noopener noreferrer"> <img src={youtube_icon} alt='youtube'/> </a>
+          <a href='https://www.instagram.com/teamstoica/' target="_blank" rel="noopener noreferrer"> <img src={instagram_icon } alt='instagram'/> </a>
         </div>
       </div>
     )

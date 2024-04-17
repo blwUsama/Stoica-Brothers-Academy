@@ -6,7 +6,13 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3001;
 
-app.use(cors());
+const corsOptions = {
+    // origin: 'https://stoica-brothers-gjkp564lwq-lz.a.run.app',
+    origin: 'http://192.168.1.2:3000',
+    optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 

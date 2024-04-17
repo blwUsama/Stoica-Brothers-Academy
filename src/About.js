@@ -12,7 +12,7 @@ import row_8 from './images/big-image/stoica4-4-8.jpg';
 import row_9 from './images/big-image/stoica4-4-9.jpg';
 import observer from './Observer.js';
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 function About() {
 

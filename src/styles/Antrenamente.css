@@ -12,10 +12,10 @@
 }
 
 .schedule{
-    width: 80%;
+    width: 65%;
     height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
     /* max-height: 700px; */
 }
 
@@ -24,7 +24,7 @@
     height: auto;
 }
 
-@media screen and (max-width: 550px)
+@media screen and (max-width: 660px)
 {
     .schedule{
         width: 95%;

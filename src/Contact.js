@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Faq from 'react-faq-component';
 import './styles/Contact.css'
 import title_image from './images/stoica5.jpg';
+import GoogleMap from './GoogleMap';
 
 const data = {
     title: "INTREBARI PUSE FRECVENT",
@@ -69,7 +70,10 @@ function Contact()
         // POST request to the epxress server here
         // ....
 
-        fetch('http://localhost:3001/send-email', {
+        // const serverURL = 'https://stoica-brothers-gjkp564lwq-lz.a.run.app:3001/send-email'
+        const serverURL = 'http://192.168.1.2:3001/send-email'
+
+        fetch(serverURL, {
             method: "POST",
             headers: {
                 'Content-Type' : 'application/json',
@@ -77,7 +81,7 @@ function Contact()
             body: JSON.stringify(mailOptions),
         })
         .then((response) => {
-            console.log("then block has run successfully");
+            // console.log("then block has run successfully");
             if(response.ok)
             {
                 setSentSuccess(true);
@@ -92,6 +96,7 @@ function Contact()
 
         .catch((error) => {
             console.log("unable to contact server");
+            setSentSuccess(false);
         })
 
         // e.target.reset();
@@ -147,10 +152,11 @@ function Contact()
                         />
                     </div>
                 </div>
-                <div className='map'>
+                {/* <div className='map'>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.8809805462074!2d26.036604115522604!3d44.415087979102516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201e80ac34baf%3A0x6ca18a61316a236!2sStoica%20Brothers%20Fight%20Academy!5e0!3m2!1sen!2sro!4v1684844791111!5m2!1sen!2sro" 
-                        width="90%" height="auto" style={{border:0, marginLeft:'5%', marginRight:'5%', aspectRatio:16/9}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                        width="90%" height="auto" style={{border:0, marginLeft:'5%', marginRight:'5%', aspectRatio:16/9}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div> */}
+                <GoogleMap />
 
             </div>
 
