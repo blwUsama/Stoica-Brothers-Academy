@@ -1,0 +1,91 @@
+.preturi-content{
+    padding-bottom: 40px;
+}
+
+.preturi-content h2{
+    color : white;
+    text-align : center;
+    font-size: 48px;
+    /* margin: 30px 5%; */
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* .flex-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+} */
+
+.table{
+    width:80%;
+    margin: 0 10%;
+}
+
+.chart-row{
+    /* display:flex; */
+    justify-content:space-between;
+    /* box-shadow: 10px 0 0 0.9px rgb(255, 255, 255); */
+}
+
+.chart-row:nth-child(odd){
+    background-color: rgb(18, 18, 18);
+}
+
+.chart-row:nth-child(even)
+{
+    background-color: rgb(38, 38, 38);
+}
+
+.chart-row:nth-child(last){
+    background-color: red;
+}
+
+th, td{
+    color:white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 21px;
+
+}
+
+td:nth-child(1), th:nth-child(1){
+    width: 40%;
+    font-weight: bold;
+}
+
+td:nth-child(2), th:nth-child(2){
+    width: 20%;
+}
+
+td:nth-child(3), th:nth-child(3){
+    width: 40%;
+}
+
+.table > :last-child{
+    /* background-image: linear-gradient(to bottom, rgb(38, 38, 38), rgb(0, 0, 0)); */
+}
+
+@media only screen and (max-width: 700px) {
+    th, td{
+      font-size: 16px;
+    }
+
+    .preturi-content h2{
+        font-size: 33px;
+        /* color:red; */
+    }
+  }
+
+@media only screen and (max-width: 440px) {
+th, td{
+    font-size: 14px;
+}
+
+.preturi-content h2{
+    font-size: 28px;
+}
+}

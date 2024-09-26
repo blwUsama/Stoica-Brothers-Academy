@@ -1,0 +1,92 @@
+.antrenamente-content{
+    background-color: black;
+    margin-top: 20px;
+}
+
+.antrenamente-content p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    -webkit-text-stroke: 0.5px red;
+    /* padding-right: 10%; */
+}
+
+.program-ghencea{
+    width: 65%;
+    height: auto;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    /* max-height: 700px; */
+}
+
+.program-militari{
+    width: 65%;
+    height: auto;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    margin-top: 80px;
+    /* max-height: 700px; */
+}
+
+.program-legend{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.buttons-section{
+    display:flex;
+    align-items: space-between;
+    justify-content: space-around;
+}
+
+.antrenamente-content .button{
+    height: 50px;
+    border-radius: 15px;
+    background-color: red;
+    color: black;
+    border: 3px solid red;
+  
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+  
+    font-size: 18px;
+    white-space: nowrap;
+  
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+  }
+  
+  .antrenamente-content .button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color:  red;
+  }
+.trainers{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 660px)
+{
+    .program-ghencea{
+        width: 95%;
+        margin: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .program-militari{
+        width: 95%;
+        margin: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .program-legend{
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    
+}

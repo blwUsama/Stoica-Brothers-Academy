@@ -1,11 +1,15 @@
 @font-face {
+  font-family: CaptureIt;
+  src: url("./fonts/Capture\ it.ttf");
+}
+
+@font-face {
   font-family: Oswald;
   src: url("./fonts/Oswald-VariableFont_wght.ttf");
 }
-
 * {
-  -webkit-tap-highlight-color: transparent; /* Webkit browsers (Safari, Chrome, etc.) */
-  tap-highlight-color: transparent; /* Non-Webkit browsers (Firefox) */
+  /* -webkit-tap-highlight-color: transparent;  Webkit browsers (Safari, Chrome, etc.) 
+  tap-highlight-color: transparent;  Non-Webkit browsers (Firefox)  */
 }
 
 html body {
@@ -215,6 +219,7 @@ html body {
 
 .page-title-text h1{
   font-size: 40px;
+  font-family: 'Oswald';
   color: white;
   -webkit-text-stroke:2px black ;
 }

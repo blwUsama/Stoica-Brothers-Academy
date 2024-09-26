@@ -17,13 +17,18 @@ function Footer()
         </div>
 
         <div className='line'> 
+          <img src={pin_icon} alt='pin'/>
+          <p> Aleea Zorelelor nr. 13 / Strada Răsăritului nr 3, București</p>
+        </div>
+
+        {/* <div className='line'> 
           <img src={mail_icon} alt='mail'/>
           <p> balawiu@gmail.com </p>
-        </div>
+        </div> */}
 
         <div className='line'> 
           <img src={phone_icon} alt='phone'/>
-          <p> 0762 598 952 </p>
+          <p> 0737 022 239 </p>
         </div>
 
         <div className='social-links'>

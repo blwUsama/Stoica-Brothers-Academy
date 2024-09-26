@@ -17,7 +17,7 @@ function MainPage()
                 <div className='between-figures-container'>
                     <h4 className='between-figures-headings'> ANTRENEAZA-TE CU CAMPIONII </h4>
                     <h1 className='between-figures-headings'> PENTRU A DEVENI CAMPION </h1>
-                    <Link to="/antrenamente"><button className='button'> <b> DEVINO MEMBRU </b></button></Link>
+                    <Link to="/program"><button className='button'> <b> DEVINO MEMBRU </b></button></Link>
                 </div>
                 <img className="right-figure" src={rightFigure} alt='Bogdan Stoica'/>
             </div>
@@ -28,7 +28,7 @@ function MainPage()
                 <div className='fade2R'></div>
                 </div>
                 <div className="text">
-                <h2> Bine ați venit la orice vârstă! </h2>
+                <h2> Bun venit la orice vârstă! </h2>
                 <hr/>
                 <p> Indiferent de câți ani aveți, sunteți bineveniți la sala noastră. 
                     Descoperiți bucuria antrenamentelor într-un mediu prietenos și motivant! </p>

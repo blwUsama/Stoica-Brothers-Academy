@@ -1,31 +1,29 @@
 import React, { useState } from 'react';
 import Faq from 'react-faq-component';
 import './styles/Contact.css'
-import title_image from './images/stoica5.jpg';
+import title_image from './images/stoica7-2.jpeg';
 import GoogleMap from './GoogleMap';
+import whatsappLogo from './images/whatsapp-logo.png';
+import messengerLogo  from './images/messenger-logo.png';
 
 const data = {
-    title: "INTREBARI PUSE FRECVENT",
+    title: "ÎNTREBĂRI PUSE FRECVENT",
     rows: [
         {
             title: "Ce trebuie să fac pentru a mă înscrie?",
-            content: "Pentru primul antrenament este suficient sa veniti cu un tricou de schimb, niste shorti de sport, si o sticla cu apa, mai departe va vor indruma antrenorii nostri",
+            content: "Pentru primul antrenament este suficient să veniți cu un tricou de schimb, niște shorti de sport, și o sticlă cu apă, mai departe vă vor îndrumă antrenorii noștri",
         },
         {
             title: "Care este echipamentul de care voi avea nevoie?",
-            content: "Echipamentul consta in: manusi, tibiere, fase pentru maini, si proteza, echipament pe care il puteti cumpara separat sau direct de la noi de la sala!",
+            content: "Echipamentul constă în: mănuși, tibiere, fașe pentru mâini, și proteză, echipament pe care îl puteți cumpără separat sau direct de la noi de la sala!",
         },
         {
-            title: "Ma vor antrena fratii Stoica?",
-            content: "Nu, fratii Stoica se atreneaza la grupa de avansati si sunt devotati carierei lor in arte martiale momentan, dar v-au pregatit o echipa de antrenori profesionisti gata sa va indrume, campioni nationali, luptatori cu o experienta vasta in spate, printre care se afla si antrenorul fratilor stoica si colegii lor de antrenament"
+            title: "Ce vârste au participanții la cursuri?",
+            content: "Depinde de la grupă la alta, avem grupe de Kickbox, Karate și Brazilian Jiu-Jitsu atât pentru copii (minimum 5 ani) cât și pentru adulți, te poți antrena cu noi indiferent de vârstă pe care o ai",
         },
         {
-            title: "Ce varste au participantii la cursuri?",
-            content: "Depinde de la grupa la alta, la Karate media este de 12 ani, la grupele de Kickbox incepatori si de MMA media de varsta este de 18 ani, iar la grupa de avansati media de varsta este de 30 de ani, dar asta este doar o media orientativa, exista adulti de 40+ ani la grupele de incepatori, si adolescenti la grupa de avansati, te poti antrena cu noi indiferent de varsta pe care o ai ",
-        },
-        {
-            title: "Practicarea unui sport de contact incurajeaza comportamentul violent in afara salii?",
-            content: "Nu, credem cu tarie ca produce fix rezultatul opus, aici tinerii pot invata despre respect, se pot disciplina, si au un mediu antrenant in care isi pot consuma energia. Nu toleram folosirea abilitatilor dobandite la sala in afara salii decat in cazuri de autoaparare",
+            title: "Practicarea unui sport de contact încurajează comportamentul violent în afara sălii?",
+            content: "Nu, credem cu tărie că produce fix rezultatul opus, aici tinerii pot învăța despre respect, se pot disciplina, și au un mediu antrenant în care își pot consuma energia. Nu tolerăm folosirea abilităților dobândite la sala în afara sălii decât în cazuri de autoapărare",
         }
     ]
 }
@@ -114,7 +112,7 @@ function Contact()
 
             <div className='contact-content'>
                 <div className='flex-container'>
-                    <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
+                    {/* <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
                         <h2> FORMULAR CONTACT </h2>
                         {sentSuccess == "still not sent" ? 
                         (
@@ -144,22 +142,21 @@ function Contact()
                         )}
 
                     
-                    </form>
+                    </form> */}
                     <div className='FAQ-section'>
                         <Faq
                             data={data}
                             styles={styles}
                         />
                     </div>
+                    
                 </div>
-                {/* <div className='map'>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.8809805462074!2d26.036604115522604!3d44.415087979102516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201e80ac34baf%3A0x6ca18a61316a236!2sStoica%20Brothers%20Fight%20Academy!5e0!3m2!1sen!2sro!4v1684844791111!5m2!1sen!2sro" 
-                        width="90%" height="auto" style={{border:0, marginLeft:'5%', marginRight:'5%', aspectRatio:16/9}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                </div> */}
+
                 <GoogleMap />
 
             </div>
 
+            <a href="https://api.whatsapp.com/send?phone=+40737022239"><img src={whatsappLogo} className='contact-icon'/></a>
         </div>
     )
 }

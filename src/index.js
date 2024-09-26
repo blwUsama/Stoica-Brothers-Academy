@@ -4,9 +4,10 @@ import { createRoot } from 'react-dom/client';
 import './styles/index.css';
 import MainPage from './MainPage';
 import About from './About';
-import Antrenamente from './Antrenamente';
+import Program from './Program';
 import Antrenori from './Antrenori';
 import Contact from './Contact';
+import Preturi from './Preturi';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
@@ -23,6 +24,8 @@ function ScrollToTop() {
   return null;
 }
 
+console.log("Designed and Developed by Usama. https://github.com/blwusama/")
+
 function App() {
   return (
     <div>
@@ -31,9 +34,10 @@ function App() {
         <Routes>
           <Route ac path="/" element={<MainPage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/antrenamente" element={<Antrenamente />} />
+          <Route path="/program" element={<Program />} />
           <Route path="/antrenori" element={<Antrenori />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/preturi" element={<Preturi />} />
 
         </Routes>
         <ScrollToTop />

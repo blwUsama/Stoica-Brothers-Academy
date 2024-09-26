@@ -38,8 +38,10 @@ function Dropdown({isOpen, toggleFunction}) {
                 <Link to="/"  onClick={toggleFunction}> Acasa </Link>
                 <Link to="/about"  onClick={toggleFunction}> Despre noi </Link>
                 <Link to="/antrenori" onClick={toggleFunction}> Antrenori </Link>
-                <Link to="/antrenamente" onClick={toggleFunction}> Antrenamente </Link>
+                <Link to="/program" onClick={toggleFunction}> Program </Link>
+                <Link to="/preturi" onClick={toggleFunction}> Preturi </Link>
                 <Link to="/contact" onClick={toggleFunction}> Contact </Link>
+
             </div>
 
             {/* this div is created just to offer a clickable area for 

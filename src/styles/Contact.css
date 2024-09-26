@@ -1,6 +1,26 @@
 .contact-content{
     margin-top: 40px;
     width: 100%;
+    /* margin-bottom: 100px; */
+}
+
+/* .contact-icons{
+    width: 80px;
+    position: sticky;
+    top: 90vh;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+    margin-bottom: 40px;
+} */
+
+.contact-icon{
+    width: 80px;
+    position: sticky;
+    top: 80px;
+    bottom: 20px;
+    margin-left: 5%;
 }
 
 .flex-container{
@@ -11,7 +31,7 @@
     margin-left: 5%;
     margin-right: 5%;
 }
-
+/* 
 form{
     width: 48%;
     background-color: rgb(40, 40, 40);
@@ -69,7 +89,6 @@ form h2{
 }
 
 .message{
-    /* display: block; */
     background-color: rgb(64, 64, 64);
     height: 200px;
     width: 90%;
@@ -82,7 +101,6 @@ form h2{
     border: 0;
     border-radius: 5px;
     color: white;
-    /* vertical-align: top; */
         
 }
 
@@ -125,10 +143,12 @@ form h2{
 
 .failure p {
     color: rgb(255, 41, 41);
-}
+} */
 
 .FAQ-section{
-    width: 48%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
     border: 5px solid rgb(64, 64, 64);
     align-self: flex-start;
     position: sticky;
@@ -136,7 +156,7 @@ form h2{
 }
 
 .faq-title h2{
-    color: white;
+    color: white !important;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 30px;
@@ -153,7 +173,6 @@ form h2{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 
 @media screen and (max-width: 640px) { 
     .inline-input{

@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/About.css'
-import title_image from './images/stoica3.jpg';
+import title_image from './images/titluDespre.jpg';
 import row_1 from './images/big-image/stoica4-4-1.jpg';
 import row_2 from './images/big-image/stoica4-4-2.jpg';
 import row_3 from './images/big-image/stoica4-4-3.jpg';
@@ -46,7 +46,7 @@ function About() {
                     <hr></hr>
                 </div>
                 <h4 className="hidden" > CINE SUNTEM NOI </h4>
-                <p className="hidden" > Bine ați venit la Sala Fraților Stoica! Fondată în 2017 de către Andrei și Bogdan Stoica, suntem o sală specializată în kickbox, MMA și BJJ.
+                <p className="hidden" > Bine ați venit la Sala Fraților Stoica! Fondată în 2017 de către Andrei și Bogdan Stoica, suntem o sală specializată în kickbox, MMA, BJJ si Karate.
                 </p>
 
                 <p className="hidden" > Cu o experiență vastă în lumea artelor marțiale, frații Stoica sunt

@@ -28,7 +28,8 @@ function Navbar() {
           <Link to="/"> Acasa </Link>
           <Link to="/about"> Despre noi </Link>
           <Link to="/antrenori"> Antrenori </Link>
-          <Link to="/antrenamente"> Antrenamente </Link>
+          <Link to="/program"> Program </Link>
+          <Link to="/preturi"> Preturi </Link>
           <Link to="/contact"> Contact </Link>
           <img className="hamburger" src={hamburger} onClick={handleMenuToggle}/>
           {isOpen ? ( <Dropdown isOpen = {true} toggleFunction={handleMenuToggle}/>) : ( <Dropdown isOpen = {false}/>)}

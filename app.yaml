@@ -1,0 +1,12 @@
+runtime: nodejs14
+
+handlers:
+  - url: /static
+    static_dir: build/static
+
+  - url: /(.*\.(json|js|css))$
+    static_files: build/\1
+    upload: build/(.*\.(json|js|css))$
+
+  - url: /.*
+    script: auto
