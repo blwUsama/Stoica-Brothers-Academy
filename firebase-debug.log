@@ -1,0 +1,82 @@
+[debug] [2024-10-13T18:01:27.315Z] ----------------------------------------------------------------------
+[debug] [2024-10-13T18:01:27.316Z] Command:       /home/usama/.nvm/versions/node/v18.17.1/bin/node /home/usama/.nvm/versions/node/v18.17.1/bin/firebase init
+[debug] [2024-10-13T18:01:27.317Z] CLI Version:   13.22.0
+[debug] [2024-10-13T18:01:27.317Z] Platform:      linux
+[debug] [2024-10-13T18:01:27.317Z] Node Version:  v18.17.1
+[debug] [2024-10-13T18:01:27.317Z] Time:          Sun Oct 13 2024 21:01:27 GMT+0300 (Eastern European Summer Time)
+[debug] [2024-10-13T18:01:27.317Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-13T18:01:27.321Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-13T18:01:27.321Z] > authorizing via signed-in user (usama.balawi@cst.ro)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/usama/Facultate/WebDev/stoica
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-13T18:01:47.872Z] Checked if tokens are valid: true, expires at: 1728845920993
+[debug] [2024-10-13T18:01:47.872Z] Checked if tokens are valid: true, expires at: 1728845920993
+[debug] [2024-10-13T18:01:47.874Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-13T18:01:47.874Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"stoica-brothers-firebase","name":"stoica-brothers-firebase"}
+[debug] [2024-10-13T18:01:48.764Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-10-13T18:01:48.764Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-10-13T18:01:48.874Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/home/usama/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/usama/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID stoica-brothers-firebase. Please try again with a unique project ID.
+[debug] [2024-10-13T18:01:55.889Z] ----------------------------------------------------------------------
+[debug] [2024-10-13T18:01:55.891Z] Command:       /home/usama/.nvm/versions/node/v18.17.1/bin/node /home/usama/.nvm/versions/node/v18.17.1/bin/firebase init
+[debug] [2024-10-13T18:01:55.891Z] CLI Version:   13.22.0
+[debug] [2024-10-13T18:01:55.891Z] Platform:      linux
+[debug] [2024-10-13T18:01:55.892Z] Node Version:  v18.17.1
+[debug] [2024-10-13T18:01:55.892Z] Time:          Sun Oct 13 2024 21:01:55 GMT+0300 (Eastern European Summer Time)
+[debug] [2024-10-13T18:01:55.892Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-13T18:01:55.896Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-13T18:01:55.896Z] > authorizing via signed-in user (usama.balawi@cst.ro)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/usama/Facultate/WebDev/stoica
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-10-13T18:02:46.903Z] Checked if tokens are valid: true, expires at: 1728845920993
+[debug] [2024-10-13T18:02:46.904Z] Checked if tokens are valid: true, expires at: 1728845920993
+[debug] [2024-10-13T18:02:46.905Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-10-13T18:02:46.905Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"118312118","name":"arca-bar"}
+[debug] [2024-10-13T18:02:47.850Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-10-13T18:02:47.850Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-10-13T18:02:47.961Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/home/usama/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/usama/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

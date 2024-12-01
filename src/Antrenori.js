@@ -4,9 +4,9 @@ import "react-multi-carousel/lib/styles.css";
 import title_image from "./images/titluAntrenori.jpg";
 import "./styles/Antrenori.css";
 
-import serghei2 from "./images/serghei/serghei-cool1.png";
-import serghei1 from "./images/serghei/serghei-cool2.png";
 import serghei from "./images/serghei/serghei.jpg";
+import serghei1 from "./images/serghei/serghei1.png";
+import serghei2 from "./images/serghei/serghei2.png";
 import serghei3 from "./images/serghei/serghei3.jpg";
 import sergheiNewBanner1 from "./images/serghei/sergheiNewBanner1.jpg";
 import sergheiNewBanner2 from "./images/serghei/sergheiNewBanner2.png";
@@ -91,6 +91,11 @@ function Antrenori() {
     // if the viewport width changes, then the number of pixels
     // above the images container changes as well
 
+    const elementsToObserve = document.getElementsByClassName("to-observe");
+    Array.from(elementsToObserve).forEach((element) => {
+      observer.observe(element);
+    });
+
     setTimeout(() => {
       calculatePixelsAbove();
     }, 500);
@@ -98,28 +103,13 @@ function Antrenori() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", calculatePixelsAbove);
-    };
-  }, []);
-
-  // effect hook for the intersection observer
-  useEffect(() => {
-    const elementsToObserve = document.getElementsByClassName("to-observe");
-    Array.from(elementsToObserve).forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => {
       const elementsToObserve = document.getElementsByClassName("to-observe");
       Array.from(elementsToObserve).forEach((element) => {
         observer.unobserve(element);
       });
     };
-  }, [showVideo]);
-  // we have showVideo in the dependency array because when we
-  // toggle showVideo, previously hidden elements
-  // get created which need to be observed as well
+  }, []);
 
-  // effect hook for moving parallax images
   useEffect(() => {
     const imagesContainer = document.querySelector(".coach-images");
     const imagesContainerRect = imagesContainer.getBoundingClientRect();
@@ -133,25 +123,15 @@ function Antrenori() {
         let speed = parseFloat(element.getAttribute("data-speed"));
         if (window.innerWidth <= 600) speed = speed / 1.5;
 
-        let yPos =
-          (window.scrollY - pixelsAboveImages + window.innerHeight) * speed;
-        if (yPos > 0)
-          yPos = Math.min(yPos, imagesContainerRect.height - imageRect.height);
-        else if (yPos < 0)
-          yPos = Math.max(
-            yPos,
-            -(imagesContainerRect.height - imageRect.height)
-          );
+        let yPos = (window.scrollY - pixelsAboveImages + window.innerHeight) * speed;
+        if (yPos > 0) yPos = Math.min(yPos, imagesContainerRect.height - imageRect.height);
+        else if (yPos < 0) yPos = Math.max(yPos, -(imagesContainerRect.height - imageRect.height));
 
         element.style.transform = `translateY(${yPos}px)`;
-        // console.log("elements moved");
       }
     });
   }, [currentScrollY]);
-  //scrollY in the dependency array to keep track of how far down
-  //we've scrolled, and Y-translates the parallax elements
 
-  // dictionary that changes a string to the corresponding images, write less code
   const coachData = {
     hodea: {
       newBanner1: hodeaNewBanner1,
@@ -212,7 +192,6 @@ function Antrenori() {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -234,22 +213,12 @@ function Antrenori() {
     setCoach(coach);
   };
 
-  const updateShowVideo = (bool) => {
-    setShowVideo(bool);
-  };
-
-  function handleBackButton() {
-    setShowVideo(false);
-    setCoach("hodea");
-  }
-
   function scrollToCoach(coach) {
     setCoach(coach);
     console.log("scrollToCoach function called");
     const targetElement = document.getElementsByClassName("coach-info")[0];
     const navBarOffset = window.innerHeight < 640 ? 60 : 80;
-    const targetPosition =
-      targetElement.getBoundingClientRect().top + window.scrollY - navBarOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navBarOffset;
     if (targetElement) {
       console.log("target element found");
       window.scrollTo({ top: targetPosition, behavior: "smooth" });
@@ -261,20 +230,11 @@ function Antrenori() {
       <div className="page-title">
         <img src={title_image} alt="Antrenori" className="page-title-image" />
         <div className="page-title-text">
-          {/* <h1 className='text-shadow'> Antrenori</h1> */}
           <h1 className="page-title-header"> Antrenori </h1>
         </div>
       </div>
 
       <div className="antrenori-content">
-        {/* <div className='sliding-text'>
-                        <p> VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            VEZI CUM ARATA O ZI DE ANTRENAMENT LA ORICARE ANTRENOR </p>
-                </div>
-
-                <CoachGrid coach={coach} showVideo={showVideo} updateCoach={updateCoach} updateShowVideo={updateShowVideo}/> */}
         <Carousel
           className="carousel"
           responsive={responsive}
@@ -348,31 +308,15 @@ function Antrenori() {
         </Carousel>
         ;
         <div className="coach-info">
-          {/* {showVideo ? <button className='backButton' onClick={handleBackButton}> <b> inapoi </b></button> : <> </>} */}
-          {/* <img src={banner}/> */}
-
           <img src={coachData[coach]["newBanner1"]} className="new-banner" />
           <img src={coachData[coach]["newBanner2"]} className="info-banner" />
         </div>
         <div className="coach-images to-observe">
           <div className="spacer-div"></div>
           <img src={coachData[coach]["photo2"]} className="center" />
-          <img
-            src={coachData[coach]["photo1"]}
-            className="left parallax-image to-observe hidden"
-            data-speed="0.4"
-          />
-          <img
-            src={coachData[coach]["photo3"]}
-            className="right parallax-image to-observe hidden"
-            data-speed="-0.4"
-          />
+          <img src={coachData[coach]["photo1"]} className="left parallax-image to-observe hidden" data-speed="0.4" />
+          <img src={coachData[coach]["photo3"]} className="right parallax-image to-observe hidden" data-speed="-0.4" />
         </div>
-        {/* <div className='images'>
-                    <img src={coachData[coach]["photo2"]} className='center to-observe hidden'/>
-                    <img src={coachData[coach]["photo1"]} className='left parallax-image to-observe hidden' data-speed="0.4" />
-                    <img src={coachData[coach]["photo3"]} className='right parallax-image to-observe hidden' data-speed="-0.4" />
-                </div> */}
       </div>
     </div>
   );

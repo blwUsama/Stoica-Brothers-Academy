@@ -23,7 +23,7 @@ const GoogleMap = () => {
       }}
     >
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDHnuANrLk8YTImcC42TnDofhQkWIyfCy0" }}
+        bootstrapURLKeys={{ key: "AIzaSyDL64PUyRAPHc1cnzTZ2PA8WbeN6yEaN6g" }}
         defaultCenter={{ lat: 44.424, lng: 26.03 }}
         defaultZoom={window.innerWidth < 640 ? 12 : 14}
       >
